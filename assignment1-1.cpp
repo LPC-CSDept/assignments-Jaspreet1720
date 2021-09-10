@@ -42,8 +42,12 @@ int main()
 
 	for( int i=0;i<10; i++)
 		ofs.write( (char *)&s, sizeof(s));
+	// line 43-44 shoud move to line 32. without for loop
+	
+	
+	// Make a code to read all student's inforamtion from the file "students.bin" with the a separate file.
 
-
+	// Make a functin to find a particular student information
 
 //students info
 }
