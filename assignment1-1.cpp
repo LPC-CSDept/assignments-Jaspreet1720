@@ -3,51 +3,42 @@
 
 using namespace std;
 
-struct Student {
-  int id;
-  string sname;
-  double score[2];
-  double sum;
-  double avg;
+
+struct student {
+    int id;
+    string name;
+    double score[2];
+    double sum;
+    double avg;
 };
-
-
 
 int main()
 {
     ifstream ifs;
-	ofstream ofs;
-	
-	Student s;
-	ifs.open("students.txt");
-    ofs.open("students.bin" );
+    ofstream ofs;
 
-	for( int i=0;i<10; i++)
-	{
-		ifs >> s.id;
-		ifs >> s.sname;
-		ifs >> s.score[0];
-		ifs >> s.score[1];
-		s.sum = s.score[0] + s.score[1];
-		s.avg = s.sum / 2;
-	}
+    student s;
+    ifs.open("studnets.txt");
+        ofs.open("students.bin");
+    
 
-	for( int i=0;i<10; i++)
-	{
-		cout << s.id << "\t" ;
-		cout << s.sname << "\t";
-		cout << s.score[0] << " " << s.score[1] << "\t";
-		cout << s.sum << " " << s.avg << endl;
-	}
+    for (int i=0; i<10; i++)
+    {
+        ifs >> s.id;
+        ifs >> s.name[i];
+        ifs >> s.score[0];
+        ifs >> s.score[1];
+        s.sum = s.score[0] + s.score[1];
+        s.avg = s.sum/2;
+    }
 
-	for( int i=0;i<10; i++)
-		ofs.write( (char *)&s, sizeof(s));
-	// line 43-44 shoud move to line 32. without for loop
-	
-	
-	// Make a code to read all student's inforamtion from the file "students.bin" with the a separate file.
+    for (int i=0; i<10; i++)
+    {
+        cout << s.id << endl;
+        cout << s.name << endl;
+        cout << s.sum << endl;
+        cout << s.avg << endl;
+    }
 
-	// Make a functin to find a particular student information
-
-//students info
+        ofs.write((char*) &s, sizeof(s));
 }
