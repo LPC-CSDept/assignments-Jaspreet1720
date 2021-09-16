@@ -18,7 +18,7 @@ int main()
     ofstream ofs;
 
     student s;
-    ifs.open("studnets.txt");
+    ifs.open("studnets2.txt");
         ofs.open("students.bin");
     
 
