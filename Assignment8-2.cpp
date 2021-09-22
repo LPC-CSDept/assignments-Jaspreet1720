@@ -25,6 +25,16 @@ int main()
 		total_linear += linearSearch(array, N, target);
 	}
 	cout << "The average comparison number " << total_linear / TRY << endl;
+	
+	// Sort
+	// selectSort(array, N);
+	
+	
+	for(int i=0; i<TRY; i++){
+		target = array[rand() % 64];
+		total_linear += binarySearch(array, N, target);
+	}
+	cout << "The average comparison number " << total_linear / TRY << endl;
 
 
 }
