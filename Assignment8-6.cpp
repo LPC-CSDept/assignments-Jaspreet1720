@@ -31,7 +31,7 @@ int main()
 	// 2) Search the certain student information by the ID (or any other fields)
 	// binary search
 
-	int target = 10006677;
+	int target = 10005566;
 
 	int result = binarySearch(s, N, target);
 	if ( result)
@@ -63,7 +63,7 @@ void makeStudents(Students s[], int N)
 	ifs.open("students.txt");
 
 	if ( ifs.fail()){
-		cout << "File not foudn\n";
+		cout << "File not found\n";
 		exit(0);
 	}
 
