@@ -60,24 +60,23 @@ void printStudents(Students * const ptr, int N)
 	}
 	cout << "==== End of Record === \n";
 }
-void sortStudents(Students * const ptr, int N)
+void sortStudents(Students *const ptr, int N)
 
 {
 
-   double sum1 = 0; //sorting students in ascending order
-   double sum2 = 0;
+   
     for(int i = 0; i<N; i++)    // using code from 9-3, purpose is to sort students in the ascending order
     {
-      for(int j=0; j<N; j++)
+      for(int j=0; j<N-i; j++)
 
       {
-sum1 = (ptr+j)->scores[0] + (ptr+j)->scores[1] + (ptr+j)->scores[2];
-sum2 = (ptr+j+1)->scores[0] + (ptr+j+1)->scores[1] + (ptr+j+1)->scores[2];
+double sum1 = (ptr+j)->scores[0] + (ptr+j)->scores[1] + (ptr+j)->scores[2];
+double sum2 = (ptr+j+1)->scores[0] + (ptr+j+1)->scores[1] + (ptr+j+1)->scores[2];
 
              if(sum1>sum2)          
 
              {
-               swap(ptr[j], ptr[j+1]);
+               swap(*(ptr+j), *(ptr+j+i));
 
 
              }
