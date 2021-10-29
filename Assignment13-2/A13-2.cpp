@@ -23,8 +23,4 @@ int main()
 
 	n2.printOut();
 
-
-
-
-	
 }
