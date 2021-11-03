@@ -29,3 +29,15 @@ int NUmbers::getElm(int i) const
 {
   return numbers.at(i);
 }
+
+int Numbers::getMax() const
+{
+  int Max = getElm(0); // initializing max as the first
+  for(int i = 1; i < getSize(); i++)
+  {
+    if(getElm(i) > Max)
+    Max = getElm(i);
+  } 
+  return Max;
+}
+
