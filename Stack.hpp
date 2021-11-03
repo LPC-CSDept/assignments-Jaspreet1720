@@ -5,20 +5,21 @@
 #include <iostream>
 using namespace std;
 
+template<class T> 
 class Stack
 {
     private:
-		vector<int> pool;
+		vector<T> pool;
     public:
 		Stack()
 		{
 			pool.reserve(0);
 		}
-		Stack(int s)
+		Stack(T s)
 		{
 			pool.reserve(s);
 		}
-		int isEmpty()
+		T isEmpty()
 		{
 			return pool.empty();
 		}
@@ -26,21 +27,21 @@ class Stack
 		{
 			pool.clear();
 		}
-		void push(int el)
+		void push(T el)
 		{
 			pool.push_back(el);
 		}
-		int pop() 
+		T pop() 
 		{
-			int value = pool.back();
+			T value = pool.back();
 			pool.pop_back();
 			return value;
 		}
-		int topEl() 
+		T topEl() 
 		{
 			return pool.back();
 		}
-		int getSize()
+		T getSize()
 		{
 			return pool.size();
 		}
@@ -50,8 +51,6 @@ class Stack
 				cout << pool[i] << "\t";
 			cout <<endl;
 		}
-
-
 };
 
 #endif
