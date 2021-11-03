@@ -52,3 +52,14 @@ int Numbers::getMin() const
   }
   return Min;
 }
+
+int Numbers::getSum() const
+{
+  int sum = 0; // initializing sum with zero
+  for(int i = 0; i < getSize(); i++)
+  {
+    sum += getElm(i); // include the current element in sum
+  }
+  return sum;
+}
+
