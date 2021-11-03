@@ -25,7 +25,7 @@ int Numbers::getSize() const
   return numbers.size();
 }
 
-int NUmbers::getElm(int i) const
+int Numbers::getElm(int i) const
 {
   return numbers.at(i);
 }
@@ -65,5 +65,5 @@ int Numbers::getSum() const
 
 void Numbers::deleteElm(int d)
 {
-  numbers.erase(remove(numbers.begin(), numbers.end(), d), numbers.end()) 
+  numbers.erase(remove(numbers.begin(), numbers.end(), d), numbers.end()); 
 }

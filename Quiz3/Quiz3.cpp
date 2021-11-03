@@ -21,25 +21,13 @@ int findMax(Numbers *numberset, int size)
 
 void deDup(Numbers &numberset1, Numbers &numberset2)
 {
-  vector<int> duplicates;
-  for(int i = 0; i < numberset1.getSize(); i++)
+  for(int i = 0; i< numberset2.getSize(); i++)
   {
-    for(int j = 0; j < numberset2.getSize(); j++)
-    {
-      if(numberset1.getElm(i) == numberset2.getElm(i))
-      {
-        duplicates.push_back(numberset1getElm(i)) break;
-      }
-    }
+    numberset1.deleteElm(numberset2.getElm(i));
 
-  }
-
-  for(int i = 0; i < duplicates.size(); i++)
-  {
-    numberset1.deleteElm(duplicates.at(i));
-    numberset2.deleteElm(duplicates.at(i));
   }
 }
+
 
 void printNumbers(Numbers &n)
 {
@@ -57,4 +45,35 @@ void printNumberSet(Numbers *numberset, int size)
     printNumbers(numberset[j]);
   }
   cout << endl;
+}
+
+int main()
+{
+  srand(time(NULL));
+  Numbers numberset[] = { Numbers(1,3), Numbers(2,5), Numbers(3,10), Numbers(4,5), Numbers(5,3)};
+
+  for(int i = 0; i < 5; i++)
+  {
+    cout << "numberset["<<i<<"] =  ";
+
+    for(int j = 0; j < numberset[i].getSize(); j++)
+    {
+      cout << numberset[i].getElm(j) << " ";
+    }
+    cout << endl;
+ }
+
+  cout << "Result of findMax = " << findMax(numberset, 5) << endl;
+
+  deDup(numberset[0], numberset[1]);
+  for(int i = 0; i < 5; i++)
+  {
+    cout << "numberset["<<i<<"] = ";
+    for(int j = 0; j<numberset[i].getSize(); j++)
+    {
+      cout << numberset[i].getElm(j)<< " ";
+    }
+     cout << endl;
+  }
+  return 0;  
 }
