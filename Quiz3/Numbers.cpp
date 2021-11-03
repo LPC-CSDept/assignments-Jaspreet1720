@@ -41,3 +41,14 @@ int Numbers::getMax() const
   return Max;
 }
 
+int Numbers::getMin() const
+{
+  int Min = getElm(0); // initializing min as the first
+  for(int i = 1; i < getSize(); i++)
+  {
+    if(getElm(i) < Min) // update the min element
+    Min = getElm(i);
+
+  }
+  return Min;
+}
