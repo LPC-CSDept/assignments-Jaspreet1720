@@ -11,15 +11,15 @@ private:
        vector<int> numbers;
 
 public:
-      Numbers();
-      Numbers(int, int);
-      int getID() const;
-      int getSize() const;
-      int getElm(int) const;
-      int getMax() const;
-      int getMin() const;
-      int getSum() const;
-      void deleteElm(int);
+      Numbers(); // default constructor
+      Numbers(int, int); // parameterized constructor
+      int getID() const; // function return ID
+      int getSize() const; // returns the size of Numbers
+      int getElm(int) const; // to get the i-th element
+      int getMax() const; // to get the max element
+      int getMin() const; // to get the min element
+      int getSum() const; // to get the sum of elements
+      void deleteElm(int); // to delete the values passed
 };
 
 #endif
