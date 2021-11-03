@@ -63,3 +63,7 @@ int Numbers::getSum() const
   return sum;
 }
 
+void Numbers::deleteElm(int d)
+{
+  numbers.erase(remove(numbers.begin(), numbers.end(), d), numbers.end()) 
+}
