@@ -12,3 +12,23 @@ Student::Student(int ID, string sname, char grade, double scores)
   this->scores = scores;
 }
 
+int Student::getID(void)
+{
+  return ID;
+}
+
+string Student::getSName(void)
+{
+  return sname;
+}
+
+char Student::getGrade(void)
+{
+  return grade;
+}
+
+double Student::getScores(void)
+{
+  return scores;
+}
+
