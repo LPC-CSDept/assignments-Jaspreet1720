@@ -23,3 +23,24 @@ class Course
   Course();
   Course(string, int, string, vector<Student>);
 
+  string getCName(void);
+  int getCredits(void);
+  string getSemester(void);
+  vector<Student> getStudent(void);
+
+  void setCName(string);
+  void setCredits(int);
+  void setSemester(string);
+  void setStudent(vector<Student>);
+
+  void addStudent(Student &s);
+  void setCourse(string, int, string, vector<Student>);
+  void printCourse(void);
+
+  static int getNumCourses();
+
+  friend ifstream &operator>>(ifstream &, Course &);
+  friend ostream &operator<<(ostream &, Course &);
+
+};
+#endif
