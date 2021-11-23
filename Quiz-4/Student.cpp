@@ -41,3 +41,13 @@ void Student::setSName(string sname)
 {
   this->sname = sname;
 }
+
+void Student::setGrade(char grade)
+{
+  this->grade = grade;
+}
+
+void Student::setScores(double scores)
+{
+  this->scores = Scores;
+}
