@@ -105,6 +105,6 @@ ostream &operator<<(ostream &os, Course &c)
   {
     os << c.getStudent()[i].getID() << " \t\t " << c.getStudent()[i].getSName() << "\t\t" << c.getStudent()[i].getGrade() << "\t\t" << c.getStudent()[i].getScores() << "\t\t" ;
   }
-  os << " ";
+  os << " " ;
 }
 
