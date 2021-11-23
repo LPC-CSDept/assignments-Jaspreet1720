@@ -103,7 +103,7 @@ ostream &operator<<(ostream &os, Course &c)
 
   for(int i = 0; i<c.getStudent().size(); i++)
   {
-    os << c.getStudent()[i].getID() << " \t\t " << c.getStudent()[i].getSName() << "\t\t" << c.getStudent()[i].getGrade() << "\t\t" << c.getStudent()[i].getScores() << "\t\t";
+    os << c.getStudent()[i].getID() << " \t\t " << c.getStudent()[i].getSName() << "\t\t" << c.getStudent()[i].getGrade() << "\t\t" << c.getStudent()[i].getScores() << "\t\t" ;
   }
   os << " ";
 }
