@@ -1,6 +1,5 @@
 #include "Student.hpp"
 #include <string>
-
 using namespace std;
 
 Student::Student() {}
@@ -49,5 +48,5 @@ void Student::setGrade(char grade)
 
 void Student::setScores(double scores)
 {
-  this->scores = Scores;
+  this->scores = scores;
 }

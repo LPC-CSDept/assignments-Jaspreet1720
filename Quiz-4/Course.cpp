@@ -24,7 +24,6 @@ Course::Course(string cname, int credits, string semester, vector <Student> stud
   NUM_COURSES += 1;
 }
 
-
 string Course::getCName(void)
 {
   return cname;
