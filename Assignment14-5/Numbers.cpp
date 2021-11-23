@@ -100,7 +100,6 @@ Numbers Numbers::operator+(const Numbers& n)
     return *s;
   }
 }
-
 void printNumbers(const Numbers& n)
 {
   for(int i = 0; i<n.size; i++)
