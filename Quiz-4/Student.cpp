@@ -32,3 +32,12 @@ double Student::getScores(void)
   return scores;
 }
 
+void Student::setID(int ID)
+{
+  this->ID = ID;
+}
+
+void Student::setSName(string sname)
+{
+  this->sname = sname;
+}
