@@ -96,3 +96,16 @@ ifstream &operator>>(ifstream &ifs, Course &c)
   }
   c.setCourse(cname, credits, semester, students);
 }
+
+ostream &operator<<(ostream &os, Course &c)
+{
+  os << c.getCName() << "\t" << c.getCredits() << "\t" ;
+  os << "StudentID\tcredit\tGrade\tScore\t" << endl;
+
+  for(int i = 0; i<c.getStudent().size(); i++)
+  {
+    os << c.getstudent()[i].getID() << " \t\t " << c.getstudent()[i].getSName() << "\t\t" << c.getstudent()[i].getGrade() << "\t\t" << c.getstudent()[i].getScores() << "\t\t";
+  }
+  os << " ";
+}
+
