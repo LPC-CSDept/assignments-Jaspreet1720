@@ -27,7 +27,6 @@ int main()
   }
 
   ifs.close();
-
   ifs.open("addstudents.txt");
   if(ifs.fail())
   {
@@ -104,7 +103,7 @@ ostream &operator<<(ostream &os, Course &c)
 
   for(int i = 0; i<c.getStudent().size(); i++)
   {
-    os << c.getstudent()[i].getID() << " \t\t " << c.getstudent()[i].getSName() << "\t\t" << c.getstudent()[i].getGrade() << "\t\t" << c.getstudent()[i].getScores() << "\t\t";
+    os << c.getStudent()[i].getID() << " \t\t " << c.getStudent()[i].getSName() << "\t\t" << c.getStudent()[i].getGrade() << "\t\t" << c.getStudent()[i].getScores() << "\t\t";
   }
   os << " ";
 }
