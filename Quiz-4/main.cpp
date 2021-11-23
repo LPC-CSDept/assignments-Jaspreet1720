@@ -15,3 +15,22 @@ int main()
 
   ifs.open("coursestudents.txt");
   if(ifs.fail())
+  {
+    cerr << "File open error\n";
+    exit(0);
+  }
+
+  for(int i = 0; i<N; i++)
+  {
+    ifs >> courses[i];
+    cout << courses[i] << endl;
+  }
+
+  ifs.close();
+
+  ifs.open("addstudents.txt");
+  if(ifs.fail())
+  {
+    cerr << "File open error\n";
+    exit(0);
+  }
