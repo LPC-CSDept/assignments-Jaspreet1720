@@ -59,3 +59,13 @@ class Numbers
     return false;         
   }
 };
+
+int Numbers::numOfObjects = 0;
+
+void printNumbers(Numbers n)
+{
+  cout << "\nNumbers are: ";
+
+  for(int i = 0; i < n.values.size(); i++)
+  cout << n.values[i] << " ";
+}
