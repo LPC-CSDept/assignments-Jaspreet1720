@@ -6,3 +6,10 @@
 
 using namespace std;
 
+class Numbers
+{
+  private:
+  int ID;
+  vector<int>values;
+  static int numOfObjects;
+}
