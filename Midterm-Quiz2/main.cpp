@@ -28,4 +28,7 @@ int main()
 
     a[i].total_scores = a[i].score1 + a[i].score2 + a[i].score3;
   }
+
+  a[n].display(a,n);
+  int i = a[10].binarysearch(a, n , 34);
 }
