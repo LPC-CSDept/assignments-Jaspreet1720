@@ -32,7 +32,7 @@ class student
 
     for(int i = 0; i < n; i++)
     {
-      cout << "student id: " << a[i].id << "name: " << a[i].name<< "total score is: " << a[i].score1 + a[i].score2 + a[i].score3 << endl;
+      cout << "student id: " << a[i].id << "name: " << a[i].name<< " total score is: " << a[i].score1 + a[i].score2 + a[i].score3 << endl;
     }
   }
 
