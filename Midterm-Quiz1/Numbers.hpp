@@ -30,4 +30,15 @@ class Numbers
     }
     numOfObjects++;
   }
+
+  int getID()
+  {
+    return ID;
+  }
+  static int getNumObjects()
+  {
+    return numOfObjects;
+  }
+
+  friend void printNumbers(Numbers n);
 }
