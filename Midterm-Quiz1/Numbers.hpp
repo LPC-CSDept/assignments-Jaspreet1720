@@ -26,7 +26,7 @@ class Numbers
     for(i = 0; i < n; i++)
     {
       int num = (rand() % (99 - 0 + 1)) + 0;
-      values.push back(num);
+      values.push_back(num);
     }
     numOfObjects++;
   }

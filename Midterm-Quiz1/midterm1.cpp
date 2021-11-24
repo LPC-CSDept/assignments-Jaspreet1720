@@ -10,8 +10,8 @@ int main()
   Numbers n2(478, 6);
 
   cout << "Object 1: ";
-  printnumbers(n1);
-  printnumbers(n2);
+  printNumbers(n1);
+  printNumbers(n2);
 
   if(n1 > n2)
      cout << "\nObject 1 numbers are greater than Object 2";
