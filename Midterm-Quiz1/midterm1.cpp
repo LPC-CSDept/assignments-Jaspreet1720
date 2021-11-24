@@ -12,4 +12,12 @@ int main()
   cout << "Object 1: ";
   printnumbers(n1);
   printnumbers(n2);
+
+  if(n1 > n2)
+     cout << "\nObject 1 numbers are greater than Object 2";
+
+  else 
+     cout << "\nObject 2 numbers are greater than Object 1";
+
+      return 0;   
 }
