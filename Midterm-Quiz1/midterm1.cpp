@@ -10,6 +10,6 @@ int main()
   Numbers n2(478, 6);
 
   cout << "Object 1: ";
-  printNumbers(n1);
-  printNumbers(n2);
+  printnumbers(n1);
+  printnumbers(n2);
 }
