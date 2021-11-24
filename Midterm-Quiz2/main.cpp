@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
   int i = 10;
-  studenta[10];
+  student a[10];
 
   for(int i = 0; i < n; i++)
   {
@@ -31,4 +31,14 @@ int main()
 
   a[n].display(a,n);
   int i = a[10].binarysearch(a, n , 34);
+
+  if(i == -1)
+  {
+    cout << "no such id is present" << endl;
+  }
+
+  else
+  {
+    cout << "student id: " << a[i].id << "name: " << a[i].name << endl;
+  }
 }
