@@ -4,12 +4,13 @@ using namespace std;
 
 class student
 {
+  public:
   int id;
   string name;
   int score1;
   int score2;
   int score3;
-  int total scores;
+  int total_scores;
 
   void display(student a[], int n)
   {

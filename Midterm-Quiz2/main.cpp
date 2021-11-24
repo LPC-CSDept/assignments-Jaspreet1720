@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-  int i = 10;
+  int n = 10;
   student a[10];
 
   for(int i = 0; i < n; i++)
