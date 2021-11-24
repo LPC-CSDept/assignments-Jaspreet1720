@@ -41,4 +41,21 @@ class Numbers
   }
 
   friend void printNumbers(Numbers n);
-}
+
+  bool operator >(const Numbers &n2)
+  {
+    int sum1 = 0, sum2 = 0;
+
+    for(int i = 0; i < values.size(); i++)
+        sum1 += values[i];
+
+    for(int i = 0; i < n2.values.size(); i++)
+         sum2 += n2.values[i];
+
+    if(sum1 > sum2)
+    return true;
+
+    else
+    return false;         
+  }
+};
