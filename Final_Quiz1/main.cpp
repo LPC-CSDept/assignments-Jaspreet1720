@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "Course.hpp"
 
 using namespace std;
@@ -69,8 +70,8 @@ int main()
       cout << "Course found at index" << x << endl;
       cout << "\nResult from iterative binary search: ";
       courses[x].print();
-      cout << "\nResult from recursive binary search: ";
-      courses[y].print();
+     cout << "\nResult from recursive binary search: ";
+     courses[y].print();
       cout << endl;
     }
 
