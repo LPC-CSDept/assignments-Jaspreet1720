@@ -14,7 +14,7 @@ int main()
   if(data_file.fail())
   {
     cout << "Error!! Failed to open data.txt file..."<< endl;
-    Cout << "Make sure data.txt file is present in the current working directory." << endl;
+    cout << "Make sure data.txt file is present in the current working directory." << endl;
     return 1;
   }
 
