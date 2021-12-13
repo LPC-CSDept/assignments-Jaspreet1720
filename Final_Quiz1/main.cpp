@@ -64,8 +64,21 @@ int main()
     int x = binary_search(courses, n, id); // search the course using binary search
     int y = recursive_binary_search(courses, 0, n - 1, id); // search the code using recursive binary search
 
-    
+    if(x!= -1)
+    {
+      cout << "Course found at index" << x << endl;
+      cout << "\nResult from iterative binary search: ";
+      courses[x].print();
+      cout << "\nResult from recursive binary search: ";
+      courses[y].print();
+      cout << endl;
+    }
+
+    else
+    {
+      cout << "Course with id = " << id << " not found..." << endl;
+    }
   }
 
-
+  return 0;
 }  
