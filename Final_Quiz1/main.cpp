@@ -110,3 +110,26 @@ int binary_search(Course *courses, int n, int search_id)
 
   return -1;
 }
+
+int recursive_binary_search(Course *courses, int l, int r, int search_id)
+{
+  while(l <= r)
+  {
+    int mid = l+(r-l)/2;
+
+    if(courses[mid].getid() == search_id)
+    {
+      return mid;
+    }
+
+    if(courses[mid].getid() < search_id)
+    {
+      return recursive_binary_search(courses, mid + 1, r, search_id);
+    }
+    else
+    {
+      return recursive_binary_search(courses, l, mid - 1, search_id);
+    }
+  }
+  return -1;
+}
