@@ -82,3 +82,31 @@ int main()
 
   return 0;
 }  
+
+int binary_search(Course *courses, int n, int search_id)
+{
+  int l = 0;
+  int r = n - 1;
+
+  while(l <= r)
+  {
+    int mid = l+(r-l)/2;
+
+    if(courses[mid].getid() == search_id)
+    {
+      return mid;
+    }
+
+    if(courses[mid].getid() < search_id)
+    {
+      l = mid + 1;
+    }
+
+    else
+    {
+      r = mid - 1;
+    }
+  }
+
+  return -1;
+}
