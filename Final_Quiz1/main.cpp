@@ -50,5 +50,22 @@ int main()
     }
   }
 
+  while(true)
+  {
+    int id;
+
+    cout << "Enter course id to search(-1 to exit): ";
+    cin >> id;
+
+    if(id == -1)
+    {
+      break;
+    }
+    int x = binary_search(courses, n, id); // search the course using binary search
+    int y = recursive_binary_search(courses, 0, n - 1, id); // search the code using recursive binary search
+
+    
+  }
+
 
 }  
