@@ -37,7 +37,7 @@ void Course::setName(const string &name)
   this->name = name;
 }
 
-void Coure::setCredit(int credit)
+void Course::setCredit(int credit)
 {
   this->credit = credit;
 }

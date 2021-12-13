@@ -43,7 +43,7 @@ int main()
     {
       if(courses[q].getId() > courses[q+1].getId())
       {
-        Course c  = course[q];
+        Course c  = courses[q];
         courses[q] = courses[q+1];
         courses[q+1] = c;
       }
@@ -92,12 +92,12 @@ int binary_search(Course *courses, int n, int search_id)
   {
     int mid = l+(r-l)/2;
 
-    if(courses[mid].getid() == search_id)
+    if(courses[mid].getId() == search_id)
     {
       return mid;
     }
 
-    if(courses[mid].getid() < search_id)
+    if(courses[mid].getId() < search_id)
     {
       l = mid + 1;
     }
@@ -117,12 +117,12 @@ int recursive_binary_search(Course *courses, int l, int r, int search_id)
   {
     int mid = l+(r-l)/2;
 
-    if(courses[mid].getid() == search_id)
+    if(courses[mid].getId() == search_id)
     {
       return mid;
     }
 
-    if(courses[mid].getid() < search_id)
+    if(courses[mid].getId() < search_id)
     {
       return recursive_binary_search(courses, mid + 1, r, search_id);
     }
