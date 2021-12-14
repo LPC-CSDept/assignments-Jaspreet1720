@@ -60,4 +60,15 @@ class ProductionWorker: public Employee{
     cout << get_emp_name() << "\t" << get_emp_number() << "\t\t";
     cout << get_hire_date() << "\t" << shift << "\t" << pay << endl;
   }
-}
+
+  double get_pay()
+  {
+    return pay;
+  }
+  bool operator > (ProductionWorker worker)
+  {
+    if(pay > worker.get_pay())
+    return true;
+    return false;
+  }
+};
