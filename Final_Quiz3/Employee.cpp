@@ -50,5 +50,14 @@ class ProductionWorker: public Employee{
     pay = 0;
   }
 
-  
+  ProductionWorker(string name, string id, string date, int_shift_no, double pay_rate):Employee(name,id, date){
+    shift = shift_no;
+    pay = pay_rate;
+  }
+
+  void print_details()
+  {
+    cout << get_emp_name() << "\t" << get_emp_number() << "\t\t";
+    cout << get_hire_date() << "\t" << shift << "\t" << pay << endl;
+  }
 }
