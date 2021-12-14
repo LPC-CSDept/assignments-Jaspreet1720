@@ -37,3 +37,18 @@ class Employee
         return hire_date;
       }
 };
+
+class ProductionWorker: public Employee{
+  private: 
+  int shift;
+  double pay;
+  
+  public:
+
+  ProductionWorker():Employee(){
+    shift = 0;
+    pay = 0;
+  }
+
+  
+}
