@@ -65,7 +65,7 @@ class ProductionWorker: public Employee{
   {
     return pay;
   }
-  bool operator > (ProductionWorker worker)
+ bool operator > (ProductionWorker worker)
   {
     if(pay > worker.get_pay())
     return true;

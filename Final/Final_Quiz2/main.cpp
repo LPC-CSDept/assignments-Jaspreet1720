@@ -19,7 +19,7 @@ int main()
   Course courses[10];
   int n = 0;
 
-  while(!data_file.eof())
+  while(!data_file.eof() && n<10)
   {
     int id, credit;
     string name;
@@ -29,7 +29,8 @@ int main()
     data_file >> credit;
 
     Course c(id, name, credit);
-    courses[n++] = c;
+    courses[n] = c;
+    n++;
   }
 
   data_file.close();

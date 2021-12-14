@@ -1,20 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include "Course.hpp"
 
 using namespace std;
 
 int binary_search(Course[], int, int);
 int recursive_binary_search(Course[], int, int, int);
+int main(){
+  ifstream data_file("data.txt");
 
-int main()
-{
-  ifstream data_file("data.txt"); // will open the file containing the input data
-
-  if(data_file.fail())
-  {
-    cout << "Error!! Failed to open data.txt file..."<< endl;
+  if(data_file.fail()){
+    cout << "Error!!! Failed to open data.txt file..." << endl;
     cout << "Make sure data.txt file is present in the current working directory." << endl;
     return 1;
   }
@@ -22,67 +18,58 @@ int main()
   Course courses[10];
   int n = 0;
 
-  while(!data_file.eof())
-  {
+  while(!data_file.eof() && n < 10){
     int id, credit;
     string name;
 
     data_file >> id;
     data_file >> name;
     data_file >> credit;
+    Course c(id, name, credit); 
+    courses[n] = c;
+    n++;
 
-    Course c(id, name, credit);
-
-    courses[n++] = c;
   }
 
   data_file.close();
 
-  for(int p = 0; p < n; p++)
-  {
-    for(int q = 0; q < n - p - 1; q++)
-    {
-      if(courses[q].getId() > courses[q+1].getId())
-      {
-        Course c  = courses[q];
-        courses[q] = courses[q+1];
-        courses[q+1] = c;
+  for(int p = 0; p < n; p++){
+    for(int q = 0; q < n - p - 1; q++){
+      if(courses[q].getId() > courses[q+1].getId()){
+        Course c = courses[q];
+        courses[q] = courses[q + 1];
+        courses[q + 1] = c;
       }
     }
   }
 
-  while(true)
-  {
+  while(true){
     int id;
-
-    cout << "Enter course id to search(-1 to exit): ";
+    cout << "Enter course id to search(-1 to exit):";
     cin >> id;
 
-    if(id == -1)
-    {
+    if(id == -1){
       break;
     }
-    int x = binary_search(courses, n, id); // search the course using binary search
-    int y = recursive_binary_search(courses, 0, n - 1, id); // search the code using recursive binary search
 
-    if(x!= -1)
-    {
+    int x = binary_search(courses, n, id);
+    int y = recursive_binary_search(courses, 0, n - 1, id);
+
+    if(x != -1){
       cout << "Course found at index" << x << endl;
       cout << "\nResult from iterative binary search: ";
       courses[x].print();
-     cout << "\nResult from recursive binary search: ";
-     courses[y].print();
+      cout << "\nResult from recursive binary search: ";
+      courses[y].print();
       cout << endl;
     }
-
-    else
-    {
-      cout << "Course with id = " << id << " not found..." << endl;
+    else{
+      cout << "Course with id= " <<id<< "not found..."<< endl;
     }
   }
-
   return 0;
-}  
+}
+
 
 int binary_search(Course *courses, int n, int search_id)
 {
