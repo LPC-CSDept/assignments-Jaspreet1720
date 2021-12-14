@@ -20,9 +20,9 @@ class Employee
 
       Employee(string name, string e_number, string date)
       {
-        emp_name = " ";
-        emp_number = " ";
-        hire_date = " ";
+        emp_name = name;
+        emp_number = e_number;
+        hire_date = date;
       }
 
       string get_emp_name(){
@@ -50,7 +50,7 @@ class ProductionWorker: public Employee{
     pay = 0;
   }
 
-  ProductionWorker(string name, string id, string date, int_shift_no, double pay_rate):Employee(name,id, date){
+  ProductionWorker(string name, string id, string date, int shift_no, double pay_rate):Employee(name,id, date){
     shift = shift_no;
     pay = pay_rate;
   }
@@ -91,4 +91,21 @@ int main()
     ProductionWorker worker(name, id, date, shift, pay);
     ProductionWorkers[i] = worker;
   }
+
+  cout << "Employee Name\tEmployee Number\tJoining\tShift\tPay Rate\n";
+  for(int i = 0; i < 10; i++)
+  {
+    ProductionWorkers[i].print_details();
+  }
+
+  ProductionWorker greatestPay = ProductionWorkers[0];
+  for(int i = 1; i < 10; i++)
+  {
+    if(ProductionWorkers[i] > greatestPay)
+    greatestPay = ProductionWorkers[i];
+  }
+
+  cout << "Employee with highest pay rate: \n";
+  greatestPay.print_details();
+  return 0;
 }
