@@ -12,6 +12,7 @@ int main()
   if(data_file.fail())
   {
     cout << "Error!! Failed to open data.txt file..." << endl;
+    cout << "Make Sure data.txt file is present in the current working directory, " << endl;
     return 1;
   }
 
@@ -34,9 +35,7 @@ int main()
   data_file.close();
 
   cout << "Array Before Sorting: " << endl;
-
-  for(int i = 0; i < n; i++)
-  {
+  for(int i=0; i<n; i++){
     courses[i].print();
   }
 
@@ -44,9 +43,9 @@ int main()
 
   cout << "\nArray After Performing the Quick Sort: " << endl;
 
-  for(int i = 0; i < n, i++)
+  for(int i = 0; i < n; i++ )
   {
-    courses[i],print();
+    courses[i].print();
   }
     return 0;
 
@@ -62,7 +61,16 @@ void quick_sort(Course *courses, int l, int h)
 
   while(i < j)
   {
-    while(courses[++i.getId() < course.getId()]);
-    while(courses[--j.getId() > course.getId()]);
+    while(courses[++i].getId() < course.getId());
+    while(courses[--j].getId() > course.getId());
+
+    if(i < j)
+    {
+      Course temp = courses[i];
+      courses[i] = courses[j];
+      courses[j] = temp;
+    }
   }
+  quick_sort(courses, l, i);
+  quick_sort(courses, i + 1, h);
 }
