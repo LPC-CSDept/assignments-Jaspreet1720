@@ -72,3 +72,23 @@ class ProductionWorker: public Employee{
     return false;
   }
 };
+
+int main()
+{
+  ProductionWorker ProductionWorkers[10];
+
+  ifstream file_input;
+  file_input.open("data.txt");
+
+  string name, id, date;
+  int shift;
+  double pay;
+
+  for(int i = 0; i < 10; i++)
+  {
+    file_input >> name >> id >> date >> shift >> pay;
+
+    ProductionWorker worker(name, id, date, shift, pay);
+    ProductionWorkers[i] = worker;
+  }
+}
